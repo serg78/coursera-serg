@@ -1,15 +1,29 @@
-body {
-  font-size: 16px;
-  color: #fff;
-  background-color: gray;
- 
-}
+
 
 /** HEADER **/
+.container-fluid {
+  border: 2px solid black;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+ section {
+  color: black;
+  background-color: #BBBCAE ;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+h2, h3 {
+  text-align: center;
+}
 #header-nav {
-  background-color: #f6b319;
+  background-color: #AEAF9D  ;
   border-radius: 0;
   border: 0;
+  margin-bottom: 0em;
 }
 .navbar-brand {
   padding-top: 25px;
@@ -17,7 +31,7 @@ body {
 
 .navbar-brand h1 { /* Restaurant name */
   
-  color: #557c3e;
+  color: black;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
@@ -25,51 +39,57 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
+  /*vertical-align: middle;*/
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
 
 #nav-list {
-  margin-top: 10px;
+  margin-top: 0em;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 #nav-list a {
-  color: #951C49;
+  color: black;
   text-align: center;
+border: 1px solid black;
 }
 #nav-list a:hover {
   background: #E7E7E7;
 }
 #nav-list a span {
   font-size: 1.8em;
+
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #61122f;
+  border: 1px solid black;
 }
 .navbar-header button.navbar-toggle {
-  clear: both;
-  margin-top: -30px;
+ float: right;
+  margin-top: 1.5em;
 }
 /* END HEADER */
 
 /********** Large devices only **********/
-@media (min-width: 1200px) {
-
+@media (min-width: @screen-lg-min) {
 }
 
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  }
-  
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
 }
-
+/********** Small devices only **********/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+}
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* Header */
+  .container-fluid {
+    padding-left: 0em;
+    padding-right: 0em;
+   
+  }
   .navbar-brand {
     padding-top: 10px;
     height: 80px;
@@ -86,6 +106,11 @@ body {
     font-size: 1em;
     margin-right: 5px;
   }
-   }
+  
   /* End Header */
 
+  section {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
